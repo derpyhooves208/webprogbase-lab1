@@ -1,0 +1,113 @@
+@color: {
+	a: #135c7e;
+	b: #f3e1c2;
+	c: #e2815a;
+	d: #d12d24;
+	e: #860809;
+};
+
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14pt;
+	line-height: 1.5;
+}
+
+body {
+	background-color: @color[b];
+	color: @color[a];
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	&::before {
+		content: '►';
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: @color[c];
+		text-decoration: underline;
+	}
+}
+
+tr:hover {
+	background-color: #eeeeee;
+}
+
+
+.cation {
+	color: @color[d];
+}
+
+.box {
+	margin: 0 auto;
+	max-width: 1024px;
+	.top {
+		padding: 24px 64px;
+	}
+	.middle {
+		display: flex;
+		flex-flow: row nowrap;
+		.menu {
+			flex-grow: 0;
+			flex-shrink: 0;
+			min-width: 150px;
+			padding: 0 36px 0 16px;
+		}
+		.content {
+			flex-grow: 1;
+			flex-shrink: 1;
+
+		}
+	}
+}
+
+.gallery {
+	width: 100%;
+	&-index {
+		min-width: 64px;
+	}
+	&-title {
+		min-width: 256px;
+	}
+	&-preview {}
+	&-header {
+		font-weight: bold;
+	}
+	&-row {
+		font-weight: normal;
+	}
+	&-image {
+		width: 512px;
+	}
+	&-image-full {
+		width: 100%;
+	}
+}
+
+.users {
+	width: 100%;
+	&-index {
+		min-width: 64px;
+	}
+	&-login {
+		min-width: 256px;
+	}
+	&-fullname {}
+	&-header {
+		font-weight: bold;
+	}
+	&-row {
+		font-weight: normal;
+	}
+}
